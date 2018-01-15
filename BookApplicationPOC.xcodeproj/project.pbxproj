@@ -9,14 +9,25 @@
 /* Begin PBXBuildFile section */
 		5606E4275C4C16DC23AC5CF6 /* Pods_BookApplicationPOC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FABCAAB1FE5C04E3F6D5677 /* Pods_BookApplicationPOC.framework */; };
 		7116027870EDA2660F9ED906 /* Pods_BookApplicationPOCUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50C9C859D2A4C8EE37884901 /* Pods_BookApplicationPOCUITests.framework */; };
+		71B7F5E077D136E423CA786A /* Pods_BookApplicationPOCUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950C4729200CA02800F44F83 /* Pods_BookApplicationPOCUITests.framework */; };
 		7652A8AB611EB27F61B46CC3 /* Pods_BookApplicationPOCTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D10125BF502B9D0140AC4B50 /* Pods_BookApplicationPOCTests.framework */; };
+		895CD4B6B30674DBF6F80F3C /* Pods_BookApplicationPOCTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950C4728200CA02800F44F83 /* Pods_BookApplicationPOCTests.framework */; };
 		950C46ED200C9ABE00F44F83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C46EC200C9ABE00F44F83 /* AppDelegate.swift */; };
-		950C46EF200C9ABE00F44F83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C46EE200C9ABE00F44F83 /* ViewController.swift */; };
 		950C46F2200C9ABE00F44F83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 950C46F0200C9ABE00F44F83 /* Main.storyboard */; };
 		950C46F4200C9ABE00F44F83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 950C46F3200C9ABE00F44F83 /* Assets.xcassets */; };
 		950C46F7200C9ABE00F44F83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 950C46F5200C9ABE00F44F83 /* LaunchScreen.storyboard */; };
 		950C4702200C9ABE00F44F83 /* BookApplicationPOCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C4701200C9ABE00F44F83 /* BookApplicationPOCTests.swift */; };
 		950C470D200C9ABE00F44F83 /* BookApplicationPOCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C470C200C9ABE00F44F83 /* BookApplicationPOCUITests.swift */; };
+		950C471F200C9E5200F44F83 /* ServiceUrlConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C471E200C9E5200F44F83 /* ServiceUrlConstant.swift */; };
+		950C4721200C9EB200F44F83 /* RequestResponceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C4720200C9EB200F44F83 /* RequestResponceHandler.swift */; };
+		950C4722200CA02800F44F83 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950C4726200CA02800F44F83 /* Alamofire.framework */; };
+		950C4723200CA02800F44F83 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950C4727200CA02800F44F83 /* AlamofireImage.framework */; };
+		950C4724200CA02800F44F83 /* Pods_BookApplicationPOCTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950C4728200CA02800F44F83 /* Pods_BookApplicationPOCTests.framework */; };
+		950C4725200CA02800F44F83 /* Pods_BookApplicationPOCUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950C4729200CA02800F44F83 /* Pods_BookApplicationPOCUITests.framework */; };
+		950C472B200CB46D00F44F83 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C472A200CB46D00F44F83 /* MainViewController.swift */; };
+		950C472D200CD3BF00F44F83 /* BooksEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C472C200CD3BF00F44F83 /* BooksEntity.swift */; };
+		950C4731200CD87200F44F83 /* volumeInfoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C4730200CD87200F44F83 /* volumeInfoEntity.swift */; };
+		950C4735200CFE8900F44F83 /* InfoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C4734200CFE8900F44F83 /* InfoDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +57,6 @@
 		8D28391040ECA35065531209 /* Pods-BookApplicationPOCUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookApplicationPOCUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookApplicationPOCUITests/Pods-BookApplicationPOCUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		950C46E9200C9ABE00F44F83 /* BookApplicationPOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookApplicationPOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		950C46EC200C9ABE00F44F83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		950C46EE200C9ABE00F44F83 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		950C46F1200C9ABE00F44F83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		950C46F3200C9ABE00F44F83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		950C46F6200C9ABE00F44F83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,6 +67,16 @@
 		950C4708200C9ABE00F44F83 /* BookApplicationPOCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookApplicationPOCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		950C470C200C9ABE00F44F83 /* BookApplicationPOCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookApplicationPOCUITests.swift; sourceTree = "<group>"; };
 		950C470E200C9ABE00F44F83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		950C471E200C9E5200F44F83 /* ServiceUrlConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceUrlConstant.swift; sourceTree = "<group>"; };
+		950C4720200C9EB200F44F83 /* RequestResponceHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestResponceHandler.swift; sourceTree = "<group>"; };
+		950C4726200CA02800F44F83 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		950C4727200CA02800F44F83 /* AlamofireImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AlamofireImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		950C4728200CA02800F44F83 /* Pods_BookApplicationPOCTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_BookApplicationPOCTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		950C4729200CA02800F44F83 /* Pods_BookApplicationPOCUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_BookApplicationPOCUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		950C472A200CB46D00F44F83 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		950C472C200CD3BF00F44F83 /* BooksEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksEntity.swift; sourceTree = "<group>"; };
+		950C4730200CD87200F44F83 /* volumeInfoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = volumeInfoEntity.swift; sourceTree = "<group>"; };
+		950C4734200CFE8900F44F83 /* InfoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDetailViewController.swift; sourceTree = "<group>"; };
 		D10125BF502B9D0140AC4B50 /* Pods_BookApplicationPOCTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookApplicationPOCTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E46C5280458F3EDBA554700B /* Pods-BookApplicationPOCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookApplicationPOCTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookApplicationPOCTests/Pods-BookApplicationPOCTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,6 +86,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				950C4722200CA02800F44F83 /* Alamofire.framework in Frameworks */,
+				950C4723200CA02800F44F83 /* AlamofireImage.framework in Frameworks */,
+				950C4724200CA02800F44F83 /* Pods_BookApplicationPOCTests.framework in Frameworks */,
+				950C4725200CA02800F44F83 /* Pods_BookApplicationPOCUITests.framework in Frameworks */,
 				5606E4275C4C16DC23AC5CF6 /* Pods_BookApplicationPOC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,6 +99,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7652A8AB611EB27F61B46CC3 /* Pods_BookApplicationPOCTests.framework in Frameworks */,
+				895CD4B6B30674DBF6F80F3C /* Pods_BookApplicationPOCTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +108,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7116027870EDA2660F9ED906 /* Pods_BookApplicationPOCUITests.framework in Frameworks */,
+				71B7F5E077D136E423CA786A /* Pods_BookApplicationPOCUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +118,10 @@
 		04FD6F5A11EDBE4DC9E48173 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				950C4726200CA02800F44F83 /* Alamofire.framework */,
+				950C4727200CA02800F44F83 /* AlamofireImage.framework */,
+				950C4728200CA02800F44F83 /* Pods_BookApplicationPOCTests.framework */,
+				950C4729200CA02800F44F83 /* Pods_BookApplicationPOCUITests.framework */,
 				1FABCAAB1FE5C04E3F6D5677 /* Pods_BookApplicationPOC.framework */,
 				D10125BF502B9D0140AC4B50 /* Pods_BookApplicationPOCTests.framework */,
 				50C9C859D2A4C8EE37884901 /* Pods_BookApplicationPOCUITests.framework */,
@@ -137,8 +167,11 @@
 		950C46EB200C9ABE00F44F83 /* BookApplicationPOC */ = {
 			isa = PBXGroup;
 			children = (
+				950C471D200C9E0800F44F83 /* ServiceClass */,
+				950C471C200C9DF500F44F83 /* ModelClass */,
+				950C471B200C9DE000F44F83 /* Constants */,
+				950C471A200C9D9A00F44F83 /* ViewController */,
 				950C46EC200C9ABE00F44F83 /* AppDelegate.swift */,
-				950C46EE200C9ABE00F44F83 /* ViewController.swift */,
 				950C46F0200C9ABE00F44F83 /* Main.storyboard */,
 				950C46F3200C9ABE00F44F83 /* Assets.xcassets */,
 				950C46F5200C9ABE00F44F83 /* LaunchScreen.storyboard */,
@@ -163,6 +196,40 @@
 				950C470E200C9ABE00F44F83 /* Info.plist */,
 			);
 			path = BookApplicationPOCUITests;
+			sourceTree = "<group>";
+		};
+		950C471A200C9D9A00F44F83 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				950C472A200CB46D00F44F83 /* MainViewController.swift */,
+				950C4734200CFE8900F44F83 /* InfoDetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		950C471B200C9DE000F44F83 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				950C471E200C9E5200F44F83 /* ServiceUrlConstant.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		950C471C200C9DF500F44F83 /* ModelClass */ = {
+			isa = PBXGroup;
+			children = (
+				950C472C200CD3BF00F44F83 /* BooksEntity.swift */,
+				950C4730200CD87200F44F83 /* volumeInfoEntity.swift */,
+			);
+			path = ModelClass;
+			sourceTree = "<group>";
+		};
+		950C471D200C9E0800F44F83 /* ServiceClass */ = {
+			isa = PBXGroup;
+			children = (
+				950C4720200C9EB200F44F83 /* RequestResponceHandler.swift */,
+			);
+			path = ServiceClass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -460,8 +527,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				950C46EF200C9ABE00F44F83 /* ViewController.swift in Sources */,
+				950C471F200C9E5200F44F83 /* ServiceUrlConstant.swift in Sources */,
+				950C472D200CD3BF00F44F83 /* BooksEntity.swift in Sources */,
+				950C4721200C9EB200F44F83 /* RequestResponceHandler.swift in Sources */,
 				950C46ED200C9ABE00F44F83 /* AppDelegate.swift in Sources */,
+				950C4731200CD87200F44F83 /* volumeInfoEntity.swift in Sources */,
+				950C472B200CB46D00F44F83 /* MainViewController.swift in Sources */,
+				950C4735200CFE8900F44F83 /* InfoDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
