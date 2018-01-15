@@ -52,7 +52,7 @@ extension MainViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! MainviewControllerCell
-        
+        cell.accessoryType = .disclosureIndicator
         let bookObj = booksArray[indexPath.row]
         let volumeInfoObj = bookObj.volumeInfo.first
         cell.lblName.text = volumeInfoObj?.title
