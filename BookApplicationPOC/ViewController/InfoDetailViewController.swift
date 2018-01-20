@@ -32,8 +32,6 @@ class InfoDetailViewController: UITableViewController {
         volumeInfoObj = bookObj.volumeInfo.first!
         
         //Table View
-
-        
         bookDeatilTableView.delegate = self
         bookDeatilTableView.dataSource = self
         bookDeatilTableView.separatorStyle = .none
@@ -53,17 +51,14 @@ class InfoDetailViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! MainviewControllerCell
         
         return cell
-
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
-
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
@@ -74,11 +69,10 @@ class InfoDetailViewController: UITableViewController {
         let url = NSURL(string:detailObj)
         movieImageView.af_setImage(withURL:  url! as URL)
         
-        
         headerView.translatesAutoresizingMaskIntoConstraints = false
         movieImageView.translatesAutoresizingMaskIntoConstraints = false
         
-        headerView.backgroundColor = UIColor.green
+        headerView.backgroundColor = UIColor.clear
         movieImageView.backgroundColor = UIColor.clear
         
         self.view.addSubview(headerView)
@@ -115,7 +109,6 @@ class InfoDetailViewController: UITableViewController {
                                      vote_average.widthAnchor.constraint(equalTo: headerView.widthAnchor),
                                      vote_average.heightAnchor.constraint(equalToConstant: 25)])
         
-        
         let releaseDate = UILabel()
         releaseDate.translatesAutoresizingMaskIntoConstraints = false
         releaseDate.text = "Subtitle: " + "\(volumeInfoObj.subtitle)"
@@ -130,12 +123,10 @@ class InfoDetailViewController: UITableViewController {
                                      releaseDate.widthAnchor.constraint(equalTo: headerView.widthAnchor),
                                      releaseDate.heightAnchor.constraint(equalToConstant: 50)])
         
-        
         let movieOverView = UILabel()
         movieOverView.translatesAutoresizingMaskIntoConstraints = false
         
         let snippet = bookObj.searchInfo
-        
         movieOverView.text = "Text Snippet: " + "\(snippet["textSnippet"]!)"
         movieOverView.textAlignment = .left
         movieOverView.textColor = UIColor.white
@@ -160,7 +151,7 @@ class InfoDetailViewController: UITableViewController {
         NSLayoutConstraint.activate([descriptionLbl.topAnchor.constraint(equalTo: movieOverView.bottomAnchor,constant:15),
                                      descriptionLbl.leftAnchor.constraint(equalTo: headerView.leftAnchor,constant:0),
                                      descriptionLbl.widthAnchor.constraint(equalTo: headerView.widthAnchor,constant:0),
-                                     descriptionLbl.heightAnchor.constraint(equalToConstant: 120)])
+                                     descriptionLbl.heightAnchor.constraint(equalToConstant: 320)])
         
         
         let averageRatingLbl = UILabel()

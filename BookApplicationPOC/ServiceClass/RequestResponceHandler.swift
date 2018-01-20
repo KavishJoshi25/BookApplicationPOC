@@ -12,8 +12,7 @@ import Alamofire
 typealias ResponseWithDic = ([BooksEntity], NSError?,String?) -> Void
 //typealias searchResponseWithDic = (AnyObject, NSError?,String?) -> Void
 
-let maxResultCount = 30
-
+let maxResultCount = 40
 
 class RequestResponceHandler: NSObject {
     
@@ -31,7 +30,6 @@ class RequestResponceHandler: NSObject {
         getBooksRequestInstance = Alamofire.request(AppBaseUrl.allBooks + "startIndex=\(startIndex)&maxResults=\(maxResultCount)").responseJSON(completionHandler: { (responce) in
             
             self.getBooksRequestInstance = nil
-            
             
             if let json = responce.result.value {
                 
@@ -63,7 +61,6 @@ class RequestResponceHandler: NSObject {
                     if bookVolumeInfo["authors"] as? NSArray != nil{
                         bookInfo.authors = bookVolumeInfo["authors"] as? NSArray as! [String]
                     }
-                    
                     
                     bookInfo.publisher = bookVolumeInfo["publisher"] as? String ?? ""
                     bookInfo.publishedDate = bookVolumeInfo["publishedDate"] as? String ?? ""

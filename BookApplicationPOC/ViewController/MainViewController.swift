@@ -11,22 +11,30 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    @IBOutlet weak var bookTableView: UITableView!
     
+    
+    
+    @IBOutlet weak var bookTableView: UITableView!
     var booksArray = [BooksEntity]()
     
     let cellIdentifier = "tableCell"
     
+     var count:Int = 1
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        RequestResponceHandler.shared.getAllBooks(startIndex: 1) { (responce, error, string) in
-            self.booksArray =  responce
+                
+        self.fetchData(startIndex: count)
+        self.initalizeUiComponents()
+    }
+    
+    //Mark:: fetchData
+    func fetchData(startIndex:Int)  {
+        RequestResponceHandler.shared.getAllBooks(startIndex: startIndex) { (responce, error, string) in
+            self.booksArray.append(contentsOf: responce)
             self.bookTableView.reloadData()
         }
-        
-        self.initalizeUiComponents()
     }
     
     //Mark:initalizeUiComponents
@@ -37,8 +45,24 @@ class MainViewController: UIViewController {
         bookTableView.dataSource = self
         
         bookTableView.register(MainviewControllerCell.self, forCellReuseIdentifier: cellIdentifier)
-        bookTableView.backgroundColor = UIColor.clear
+        bookTableView.backgroundColor = UIColor.black
+        view.backgroundColor = UIColor.black
         
+        
+        
+        let btn1 = UIButton(type: .custom)
+        btn1.setImage(UIImage(named: "imagename"), for: .normal)
+        btn1.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+//        btn1.addTarget(self, action: #selector(Class.Methodname), for: .touchUpInside)
+        let item1 = UIBarButtonItem(customView: btn1)
+        
+        let btn2 = UIButton(type: .custom)
+        btn2.setImage(UIImage(named: "imagename"), for: .normal)
+        btn2.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+//        btn2.addTarget(self, action: #selector(Class.MethodName), for: .touchUpInside)
+        let item2 = UIBarButtonItem(customView: btn2)
+        
+        self.navigationItem.setRightBarButtonItems([item1,item2], animated: true)
     }
     
 }
@@ -52,6 +76,7 @@ extension MainViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! MainviewControllerCell
+        cell.backgroundColor = UIColor.black
         cell.accessoryType = .disclosureIndicator
         let bookObj = booksArray[indexPath.row]
         let volumeInfoObj = bookObj.volumeInfo.first
@@ -71,7 +96,11 @@ extension MainViewController:UITableViewDelegate,UITableViewDataSource{
         detailsViewController.booksDetailsArray = [booksArray[indexPath.row]]
         navigationController?.pushViewController(detailsViewController,
                                                  animated: true)
-        
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        count += 1
+       self.fetchData(startIndex: count)
     }
     
 }
@@ -83,7 +112,7 @@ class MainviewControllerCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        lblName.textColor = UIColor.red
+        lblName.textColor = UIColor.white
         lblName.lineBreakMode = .byWordWrapping
         lblName.numberOfLines = 2
         lblName.translatesAutoresizingMaskIntoConstraints = false
@@ -94,7 +123,6 @@ class MainviewControllerCell: UITableViewCell {
                                      lblName.leftAnchor.constraint(equalTo: contentView.leftAnchor,constant:15),
                                      lblName.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 1.0),
                                      lblName.heightAnchor.constraint(equalToConstant:35)])
-        
         
     }
     
